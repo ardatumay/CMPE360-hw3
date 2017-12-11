@@ -1,6 +1,6 @@
 //-----------------------------------------------------
 // Title: OPENGL
-// Author: ARDA TÜMAY
+// Author: ARDA TÜMAY- HAYRI DURMAZ
 // ID: 13180171934
 // Section: 1
 // Assignment: 3
@@ -417,6 +417,7 @@ void drawScene(void) {
 
 
 	//glBindTexture(GL_TEXTURE_2D,0);
+
 	glMatrixMode(GL_TEXTURE);
 	glPushMatrix();
 	glLoadIdentity();
@@ -429,10 +430,11 @@ void drawScene(void) {
 	glMatrixMode(GL_TEXTURE);
 	glPopMatrix();
 
+	//glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glPushMatrix();
+	glTranslatef(3,3,3);
 	glutSolidSphere(1,20,20);
-	glTranslatef(10,3.8,9);
 	glPopMatrix();
 
 	glBindTexture(GL_TEXTURE_2D, texture[0]);
